@@ -1,14 +1,22 @@
-﻿System.Console.WriteLine("Enter three-digit number: ");
+﻿System.Console.WriteLine("Enter number: ");
 int num = int.Parse(Console.ReadLine());
-int numSecond = 0;
 
 if (num > 99 && num < 1000)
 {
-    numSecond = num / 10;
-    numSecond = numSecond % 10;
-    System.Console.WriteLine(numSecond);
+    int result1 = num % 10;
+    System.Console.WriteLine(result1);
 }
-else
+if (num < 100)
 {
-    System.Console.WriteLine("Enter three-digit number");
+    System.Console.WriteLine("There is no third digit");
 }
+if (num > 999)
+{
+    while (num > 1000)
+    {
+    num /= 10;
+    }
+    int result2 = num % 10;
+    System.Console.WriteLine(result2);   
+}
+
