@@ -1,22 +1,33 @@
-﻿System.Console.WriteLine("Enter number: ");
-int num = int.Parse(Console.ReadLine());
+﻿System.Console.WriteLine("Enter a number of week day from 1 to 7, and you will know is it a day off: ");
+int dayWeek = int.Parse(Console.ReadLine());
 
-if (num > 99 && num < 1000)
+switch (dayWeek)
 {
-    int result1 = num % 10;
-    System.Console.WriteLine(result1);
+    case 1:
+    System.Console.WriteLine("No");
+    break;
+    case 2:
+    System.Console.WriteLine("No");
+    break;
+    case 3:
+    System.Console.WriteLine("No");
+    break;
+    case 4:
+    System.Console.WriteLine("No");
+    break;
+    case 5:
+    System.Console.WriteLine("No");
+    break;
+    case 6:
+    System.Console.WriteLine("Yes");
+    break;
+    case 7:
+    System.Console.WriteLine("Yes");
+    break;
+    default:
+    System.Console.WriteLine("Enter number of week day from 1 to 7");
+    break;
 }
-if (num < 100)
-{
-    System.Console.WriteLine("There is no third digit");
-}
-if (num > 999)
-{
-    while (num > 1000)
-    {
-    num /= 10;
-    }
-    int result2 = num % 10;
-    System.Console.WriteLine(result2);   
-}
+
+
 
